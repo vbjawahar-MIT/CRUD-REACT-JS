@@ -63,7 +63,7 @@ function App() {
   const [data, setData] = useState([]);
 
   function add() {
-    axios.post("http://localhost:5000/add", {
+    axios.post("https://crud-react-js-mffg.onrender.com/add", {
       name,
       phone,
       email,
@@ -79,7 +79,7 @@ function App() {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:5000/read")
+    axios.get("https://crud-react-js-mffg.onrender.com/read")
       .then((res) => {
         setData(res.data);
       })
