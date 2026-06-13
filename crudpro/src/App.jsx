@@ -64,11 +64,7 @@ function App() {
 
   function add() {
     axios.post("http://localhost:5000/add", {
-      name,
-      phone,
-      email,
-      age,
-    })
+      name, phone, email, age, })
     .then((res) => {
       console.log(res.data);
       alert("Data Saved Successfully");
@@ -90,50 +86,21 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Welcome To My First Own Try Coding</h1>
+      <h1>My First Project</h1>
 
       <label>Enter Your Name</label>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setname(e.target.value)}
-        placeholder="Name"
-      />
-
-      <br /><br />
-
+      <input type="text" value={name} onChange={(e) => setname(e.target.value)} placeholder="Name" />
+                    <br /><br />
       <label>Enter Your Phone Number</label>
-      <input
-        type="text"
-        value={phone}
-        onChange={(e) => setphone(e.target.value)}
-        placeholder="Phone Number"
-      />
-
-      <br /><br />
-
+      <input type="text" value={phone} onChange={(e) => setphone(e.target.value)} placeholder="Phone Number" />
+                    <br /><br />
       <label>Enter Your Email</label>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setemail(e.target.value)}
-        placeholder="you@example.com"
-      />
-
-      <br /><br />
-
+      <input type="email" value={email} onChange={(e) => setemail(e.target.value)} placeholder="you@example.com" />
+                    <br /><br />
       <label>Enter Your Age</label>
-      <input
-        type="text"
-        value={age}
-        onChange={(e) => setage(e.target.value)}
-        placeholder="Age"
-      />
-
+      <input type="text" value={age} onChange={(e) => setage(e.target.value)} placeholder="Age" />
       <br /><br />
-
       <button onClick={add}>Submit</button>
-
       <hr />
 
       <h2>Stored Data</h2>
