@@ -63,8 +63,17 @@ function App() {
   const [data, setData] = useState([]);
 
   function add() {
+<<<<<<< HEAD
     axios.post("http://localhost:5000/add", {
       name, phone, email, age, })
+=======
+    axios.post("https://crud-react-js-mffg.onrender.com/add", {
+      name,
+      phone,
+      email,
+      age,
+    })
+>>>>>>> 0de95870dacc90949a5aef0ab78162c4bfd3a237
     .then((res) => {
       console.log(res.data);
       alert("Data Saved Successfully");
@@ -75,7 +84,7 @@ function App() {
   }
 
   useEffect(() => {
-    axios.get("http://localhost:5000/read")
+    axios.get("https://crud-react-js-mffg.onrender.com/read")
       .then((res) => {
         setData(res.data);
       })
